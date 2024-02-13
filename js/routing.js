@@ -1,9 +1,9 @@
 angular.
 module('alloCine').config(function ($routeProvider) {
     $routeProvider
-        .when('/', {
-            templateUrl: 'first.html',
-            controller: 'FirstController'
+        .when('/inscription', {
+            templateUrl: 'formulaire.connexion.html',
+            controller: 'formControlleur'
         })
 
         .when('/deux', {
@@ -19,12 +19,15 @@ module('alloCine').config(function ($routeProvider) {
         .otherwise({ redirectTo: '/' });
 });
 
-app.controller('FirstController', function ($scope) {
-    $scope.message = 'Premier controller';
+angular.
+module('alloCine').controller('formControlleur', function ($scope) {
+
 });
-app.controller('SecondController', function ($scope) {
+angular.
+module('alloCine').controller('SecondController', function ($scope) {
     $scope.message = 'Deuxieme controller';
 });
-app.controller('ThirdController', function ($scope) {
+angular.
+module('alloCine').controller('ThirdController', function ($scope) {
     $scope.message = 'Troisieme controllers';
 });
