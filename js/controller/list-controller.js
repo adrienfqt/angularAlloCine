@@ -53,5 +53,10 @@ angular.module('alloCine').controller('listController', function ($scope) {
            }
         });
     }
+    $scope.filterByTitle = function (nameInput) {
+        if(nameInput){
+            $scope.movies = $scope.movies.filter(m => m.titre === nameInput);
+        }
+    }
 
 });

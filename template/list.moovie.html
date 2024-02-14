@@ -3,6 +3,9 @@
     <button ng-click="sortByNote()">Classer par NOTES</button>
 </div>
 <div class="container_catalogue">
+    <label for="filter">Filter By Name: </label>
+    <input id="filter" type="text" ng-model="filterValue">
+    <button ng-click="filterByTitle(filterValue)">Filter</button>
     <div class="row text-center mb-3">
         <section class="col-md-4 my-2 d-flex">
             <article class="card" ng-repeat="movie in movies">
