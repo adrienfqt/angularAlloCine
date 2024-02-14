@@ -2,13 +2,13 @@ angular.
 module('alloCine').config(function ($routeProvider) {
     $routeProvider
         .when('/inscription', {
-            templateUrl: 'formulaire.connexion.html',
+            templateUrl: 'template/formulaire.connexion.html',
             controller: 'formControlleur'
         })
 
-        .when('/deux', {
-            templateUrl: 'second.html',
-            controller: 'SecondController'
+        .when('/list', {
+            templateUrl: 'template/list.moovie.html',
+            controller: 'listController'
         })
 
         .when('/trois', {

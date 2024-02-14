@@ -1,0 +1,28 @@
+<div style="margin: 10px 10px 10px 10px">
+    <button ng-click="sortByAsc()">Classer par ASC</button>
+    <button ng-click="sortByNote()">Classer par NOTES</button>
+</div>
+<div class="container_catalogue">
+    <div class="row text-center mb-3">
+        <section class="col-md-4 my-2 d-flex">
+            <article class="card" ng-repeat="movie in movies">
+                <h3>{{movie.titre}}</h3>
+                <div>
+                    <p style="align-content: center; width: 350px; justify-content: center;">
+                        {{movie.description}}
+                    </p>
+                </div>
+                <div>
+                    <span>Note Moyenne: {{moyenne(movie.notes)}}</span><br>
+                    <span>Nombre de notes: {{movie.notes.length}} </span>
+                    <button ng-click="note()" type="button">Noter</button>
+                </div>
+                <form ng-show="boolConnect">
+                    <input type="number" name="note" id="note" placeholder="Note de 0 à 5">
+                    <br>
+                    <input type="text" name="comment" id="comment" placeholder="Entrez votre commentaire ">
+                </form>
+            </article>
+        </section>
+    </div>
+</div>
