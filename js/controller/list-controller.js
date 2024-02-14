@@ -2,23 +2,19 @@ angular.module('alloCine').controller('listController', function ($scope) {
     $scope.movies = [{
         titre: 'Titanic',
         description: 'Bâteau qui coule, film qui fait carton plein',
-        notes: [3.00, 4.5, 2., 2.5, 5.00, 4.5, 3.5],
-        commentaires:[]
+        notes: [3.00, 4.5, 2., 2.5, 5.00, 4.5, 3.5]
     }, {
         titre: 'American Nightmare',
         description: 'Film américain',
-        notes: [3.5, 4.5, 2.5, 2.5, 5.0, 4.5],
-        commentaires:[]
+        notes: [3.5, 4.5, 2.5, 2.5, 5.0, 4.5]
     }, {
         titre: 'American Nightmare 2 ',
         description: 'Film américain 2',
-        notes: [3.0, 4.5, 2.5, 2.5, 5., 4.5],
-        commentaires:[]
+        notes: [3.0, 4.5, 2.5, 2.5, 5., 4.5]
     }, {
         titre: 'American Nightmare 3',
         description: 'Film américain 3',
-        notes: [3.0, 4.5, 2.5, 2.5, 5.0, 4.5],
-        commentaires:[]
+        notes: [3.0, 4.5, 2.5, 2.5, 5.0, 4.5]
     }
     ];
     $scope.boolConnect =false;
@@ -55,15 +51,6 @@ angular.module('alloCine').controller('listController', function ($scope) {
                $scope.moyenne(movie.notes);
                localStorage.setItem('movies', JSON.stringify($scope.movies));
            }
-        });
-    }
-
-    $scope.addCommentaire=function (moovie,commentaire){
-        $scope.movies.forEach(movie=> {
-            if (moovie.titre === movie.titre){
-                movie.commentaires.push(commentaire);
-                localStorage.setItem('movies', JSON.stringify($scope.movies));
-            }
         });
     }
 

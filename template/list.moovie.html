@@ -15,7 +15,7 @@
                 <div>
                     <span>Note Moyenne: {{moyenne(movie.notes)}}</span><br>
                     <span>Nombre de notes: {{movie.notes.length}} </span>
-                    <button ng-click="note()" type="button">Noter / Commenter</button>
+                    <button ng-click="note()" type="button">Noter</button>
                 </div>
                 <form ng-show="boolConnect">
                     <input type="number" name="note" id="note" placeholder="Note de 0 à 5" ng-model="note">
@@ -23,7 +23,7 @@
                 </form>
                 <form ng-show="boolConnect">
                     <input type="text" name="comment" id="comment" placeholder="Entrez votre commentaire " ng-model="commentaire">
-                    <button type="button" ng-click="addCommentaire(movie,commentaire)">Valider</button>
+                    <button type="button" ng-click="addComment(movie,commentaire)">Valider</button>
                 </form>
             </article>
         </section>
