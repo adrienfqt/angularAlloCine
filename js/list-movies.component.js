@@ -1,9 +1,10 @@
 angular.
 module('alloCine').
 component('listMovies',{
-    template:'' +
-        '   <button ng-click ="$ctrl.sortByAsc()">Classer par ASC</button>\n' +
-        '    <button ng-click="$ctrl.sortByNote()">Classer par NOTES</button>' +
+    template:'<div style="margin: 10px 10px 10px 10px">\n' +
+        '        <button ng-click ="$ctrl.sortByAsc()">Classer par ASC</button>\n' +
+        '        <button ng-click="$ctrl.sortByNote()">Classer par NOTES</button>\n' +
+        '    </div>  '+
         '<div class="container_catalogue">\n' +
         '        <div class="row text-center mb-3">\n' +
         '            <section class="col-md-4 my-2 d-flex">\n' +
