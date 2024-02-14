@@ -11,8 +11,6 @@ component('listMovies',{
         '                            {{movie.description}}' +
         '                        </p>\n' +
         '                    </div>\n' +
-        '                    <div style="width: 50px; height: 50px;">\n' +
-        '                    </div>\n' +
         '                    <div>\n' +
         '                        <span>Note Moyenne: {{$ctrl.moyenne(movie.notes)}}</span><br>\n' +
         '                        <span>Nombre de notes: {{movie.notes.length}} </span>\n' +
