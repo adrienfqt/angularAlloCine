@@ -1,7 +1,10 @@
 angular.
 module('alloCine').
 component('listMovies',{
-    template:'<div class="container_catalogue">\n' +
+    template:'' +
+        '   <button ng-click ="$ctrl.sortByAsc()">Classer par ASC</button>\n' +
+        '    <button ng-click="$ctrl.sortByNote()">Classer par NOTES</button>' +
+        '<div class="container_catalogue">\n' +
         '        <div class="row text-center mb-3">\n' +
         '            <section class="col-md-4 my-2 d-flex">\n' +
         '                <article class="card" ng-repeat="movie in $ctrl.movies">\n' +
@@ -46,6 +49,15 @@ component('listMovies',{
             });
             return (sum/notes.length).toFixed(2);
         }
-
+        this.sortByAsc = function () {
+            this.movies.sort((a, b) => a.titre.localeCompare(b.titre));
+        }
+        this.sortByNote = function () {
+            this.movies = this.movies.sort((a,b) => {
+               const moyA = this.moyenne(a.notes);
+               const moyB = this.moyenne(b.notes);
+               return moyB - moyA;
+            });
+        }
     }
 });
