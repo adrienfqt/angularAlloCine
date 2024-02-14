@@ -1,5 +1,5 @@
-<div ng-app="alloCine" ng-controller="formControlleur">
-    <form name="formConnexion">
+<div ng-app="alloCine" ng-controller="formControlleur" class="formulaire-connexion" ng-show="formVisible">    
+  <form name="formConnexion">
       <div>
         <label for="nom">Nom:</label>
         <input type="text" id="nom" ng-model="utilisateur.nom" required>
