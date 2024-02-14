@@ -18,12 +18,13 @@ component('listMovies',{
         '                    <div>\n' +
         '                        <span>Note Moyenne: {{$ctrl.moyenne(movie.notes)}}</span><br>\n' +
         '                        <span>Nombre de notes: {{movie.notes.length}} </span>\n' +
+                            '<button ng-click="$ctrl.note()" type="button">Noter</button>\n '+
         '                    </div>\n' +
         '                </article>\n' +
         '            </section>\n' +
         '        </div>\n' +
         '    </div>',
-    controller: function (){
+    controller: function ($scope){
         this.movies = [{
             titre:'Titanic',
             description:'Bâteau qui coule, film qui fait carton plein',
@@ -60,5 +61,13 @@ component('listMovies',{
                return moyB - moyA;
             });
         }
+        this.note= function(){
+            if(localStorage.getItem('utilisateur') !== null ){
+
+            }else{
+                alert("Vous devez vous connecter afin d'effectuer cette action ! ");
+            }
+        }
+
     }
 });
