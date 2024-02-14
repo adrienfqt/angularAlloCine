@@ -1,5 +1,5 @@
 angular.module('alloCine').controller('listController', function ($scope) {
-    $scope.movies = [{
+    $scope.movies = JSON.parse(localStorage.getItem('movies')) || [{
         titre: 'Titanic',
         description: 'Bâteau qui coule, film qui fait carton plein',
         notes: [3.00, 4.5, 2., 2.5, 5.00, 4.5, 3.5]
