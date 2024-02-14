@@ -18,9 +18,12 @@
                     <button ng-click="note()" type="button">Noter</button>
                 </div>
                 <form ng-show="boolConnect">
-                    <input type="number" name="note" id="note" placeholder="Note de 0 à 5">
-                    <br>
-                    <input type="text" name="comment" id="comment" placeholder="Entrez votre commentaire ">
+                    <input type="number" name="note" id="note" placeholder="Note de 0 à 5" ng-model="note">
+                    <button type="button" ng-click="addNote(movie,note)">Valider</button>
+                </form>
+                <form ng-show="boolConnect">
+                    <input type="text" name="comment" id="comment" placeholder="Entrez votre commentaire " ng-model="commentaire">
+                    <button type="button" ng-click="addComment(movie,commentaire)">Valider</button>
                 </form>
             </article>
         </section>

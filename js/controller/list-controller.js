@@ -44,5 +44,14 @@ angular.module('alloCine').controller('listController', function ($scope) {
             alert("Vous devez vous connecter afin d'effectuer cette action ! ");
         }
     }
+    $scope.addNote=function (moovie,note){
+        $scope.movies.forEach(movie=> {
+           if (moovie.titre === movie.titre){
+               movie.notes.push(note);
+               $scope.moyenne(movie.notes);
+               localStorage.setItem('movies', JSON.stringify($scope.movies));
+           }
+        });
+    }
 
 });
